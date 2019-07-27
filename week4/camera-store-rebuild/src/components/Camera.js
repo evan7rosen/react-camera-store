@@ -6,6 +6,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
 import ReactStars from "react-stars";
+import PropTypes from "prop-types";
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -53,6 +54,11 @@ const Camera = props => {
       </Button>
     </Card>
   );
+};
+
+Camera.propTypes = {
+  camera: PropTypes.object.isRequired,
+  addToCart: PropTypes.func.isRequired
 };
 
 export default Camera;

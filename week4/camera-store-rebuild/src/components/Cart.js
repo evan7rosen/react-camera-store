@@ -5,6 +5,7 @@ import CardHeader from "@material-ui/core/CardHeader";
 import Button from "@material-ui/core/Button";
 import DeleteIcon from "@material-ui/icons/Delete";
 import AttachMoney from "@material-ui/icons/AttachMoney";
+import PropTypes from "prop-types";
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -59,6 +60,7 @@ const Cart = props => {
       )
     ) {
       props.clearCart();
+      window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
     }
   };
 
@@ -81,6 +83,12 @@ const Cart = props => {
       </p>
     </div>
   );
+};
+
+Cart.propTypes = {
+  clearCart: PropTypes.func.isRequired,
+  removeFromCart: PropTypes.func.isRequired,
+  cartList: PropTypes.array.isRequired
 };
 
 export default Cart;

@@ -1,6 +1,7 @@
 import React from "react";
 import Camera from "./Camera";
 import TextField from "@material-ui/core/TextField";
+import PropTypes from "prop-types";
 
 class CameraList extends React.Component {
   state = {
@@ -42,5 +43,9 @@ class CameraList extends React.Component {
     );
   }
 }
+
+CameraList.propTypes = {
+  cameraList: PropTypes.array.isRequired
+};
 
 export default CameraList;
